@@ -1,0 +1,89 @@
+contact_book = {}
+x = True
+def display_menu():
+    print("Contact Book Menu:")
+    print("1. Add Contact")
+    print("2. View Contact")
+    print("3. Edit Contact")
+    print("4. Delete Contact")
+    print("5. List All Contacts")
+    print("6. Exit")
+
+def add_contact(contact_book):
+
+    name = input()
+    if name in contact_book:
+        print('Contact already exists!')
+    else:
+        phone = input()
+        email = input()
+        address = input()
+        contact_book[name] = {
+            "phone": phone,
+            "email": email,
+            "address": address
+        }
+        print("Contact added successfully!")
+
+def view_contact(contact_book):
+    name = input()
+    if name in contact_book :
+        print(f"Name: {name}")
+        print(f"Phone: {contact_book[name]['phone']}")
+        print(f"Email: {contact_book[name]['email']}")
+        print(f"Address: {contact_book[name]['address']}")
+    else :
+        print("Contact not found!")
+
+def edit_contact(contact_book):
+    name = input()
+    if name in contact_book:
+        phone = input()
+        if phone != '':
+            contact_book[name]['phone'] = phone
+        email = input()
+        if email != '':
+            contact_book[name]['email'] = email
+        address = input()
+        if address !='':
+            contact_book[name]['address'] = address
+        print('Contact updated successfully!')
+    else :
+        print("Contact not found!")
+
+def delete_contact(contact_book):
+    name = input()
+    if name in contact_book :
+        del contact_book[name]
+        print("Contact deleted successfully!")
+    else :
+        print("Contact not found!")
+
+def list_all_contacts(contact_book):
+    if not contact_book:
+        print("No contacts available.")
+    else :
+        for i in contact_book:
+            print(f"Name: {i}")
+            print(f"Phone: {contact_book[i]['phone']}")
+            print(f"Email: {contact_book[i]['email']}")
+            print(f"Address: {contact_book[i]['address']}")
+            print("")
+
+while x == True:
+    display_menu()
+    z = input()
+    if z == '1' :
+        add_contact(contact_book)
+    elif z == '2':
+        view_contact(contact_book)
+    elif z == '3' :
+        edit_contact(contact_book)
+    elif z == '4' :
+        delete_contact(contact_book)
+    elif z == '5' :
+        list_all_contacts(contact_book)
+    elif z == '6':
+        x = False
+    else :
+        print("Invalid choice. Please try again.")
