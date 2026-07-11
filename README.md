@@ -16,9 +16,30 @@ The application supports full **CRUD** (Create, Read, Update, Delete) operations
 *   **Input Validation:** Handles empty inputs gracefully during updates to prevent data loss.
 *   **Control Flow:** Implementation of `while` loops and nested `if-elif-else` structures for an uninterrupted menu-driven experience.
 
-## 💻 How to Run
+## 💻 How to Run & Sample Output
 
-1. Make sure you have **Python 3.x** installed on your system.
-2. Clone this repository or download the source code:
-   ```bash
-   git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+```text
+1. Clone the repository:
+   git clone [https://github.com/ingyyy/contacts_system.git](https://github.com/ingyyy/contacts_system.git)
+
+2. Navigate into the folder:
+   cd contacts_system
+
+3. Run the script:
+   python contact_book.py
+
+--------------------------------------------------
+📋 APPLICATION SAMPLE OUTPUT:
+--------------------------------------------------
+Contact Book Menu:
+1. Add Contact
+2. View Contact
+3. Edit Contact
+4. Delete Contact
+5. List All Contacts
+6. Exit
+
+Name: Alice
+Phone: 123-456-7890
+Email: alice@example.com
+Address: Cairo, Egypt
